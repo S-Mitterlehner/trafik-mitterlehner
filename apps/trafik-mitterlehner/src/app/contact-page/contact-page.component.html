@@ -1,0 +1,13 @@
+<div class="page page--center page--close-end contact-page">
+    <h1>Öffnungszeiten und Kontakt</h1>
+    <div class="contact-page__contact">
+        <div class="contact-page__opening-times">
+            <info-current-opening-info [times]="openingTimes" [closedDates]="closedDates"></info-current-opening-info>
+            <info-opening-times class="contact-page__times" [times]="openingTimes"></info-opening-times>
+        </div>
+        <div class="contact-page__contact">
+            <info-contact></info-contact>
+        </div>
+    </div>
+    <app-maps [height]="800"></app-maps>
+</div>

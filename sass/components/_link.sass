@@ -1,0 +1,12 @@
+.link
+    display: inline-block
+    color: inherit
+    border-bottom: 2px solid
+    @include color('border-bottom-color', 'link')
+    white-space: nowrap
+    transition: all .3s
+
+    &:hover
+        @include color('color', link--hover)
+        @include color('border-bottom-color', 'link--hover')
+        

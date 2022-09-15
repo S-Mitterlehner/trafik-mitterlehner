@@ -1,0 +1,23 @@
+h1
+    @include media-query()
+        font-size: 220%
+
+    h2
+        margin-bottom: 10rem
+        @include media-query()
+            font-size: 150%
+
+
+h3
+    display: block
+    width: 100%
+    padding-top: 5rem
+    border-top: 1px solid lightgrey
+    margin-bottom: 2rem
+
+
+.hint
+    display: inline-block
+    padding: .3rem 0
+    @include color('color', 'hint')
+    font-size: 70%

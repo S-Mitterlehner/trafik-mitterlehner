@@ -1,0 +1,10 @@
+<div class="app">
+    <layout-header [mode]="isStartup ? 'full' : 'easy' ">
+        <app-nav-menu nav></app-nav-menu>
+    </layout-header>
+    <div class="app__content">
+        <router-outlet></router-outlet>
+    </div>
+    <layout-footer class="app__footer"></layout-footer>
+</div>
+<layout-cookie-warn></layout-cookie-warn>

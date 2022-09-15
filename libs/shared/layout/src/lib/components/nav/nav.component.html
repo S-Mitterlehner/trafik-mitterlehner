@@ -1,0 +1,12 @@
+<div class="nav">
+    <button class="nav-button" [class.nav-button--open]="isOpen" (click)="toggleMenu()">
+        <span class="nav-button__item nav-button__item--1"></span>
+        <span class="nav-button__item nav-button__item--2"></span>
+        <span class="nav-button__item nav-button__item--3"></span>
+    </button>
+
+    <div class="backdrop" *ngIf="isOpen" (click)="isOpen = false"></div>
+    <div class="nav-menu" *ngIf="isOpen">
+        <ng-content></ng-content>
+    </div>
+</div>

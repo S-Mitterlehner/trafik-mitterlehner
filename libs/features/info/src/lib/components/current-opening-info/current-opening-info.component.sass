@@ -1,0 +1,38 @@
+@import sass/imports
+
+.status
+    display: inline-block
+    padding: 1rem 5rem
+    text-align: center
+    border-radius: 15px
+    text-transform: uppercase
+    
+    &--opened
+        background-color: #1dc44a
+        color: black
+
+    &--closed
+        background-color: firebrick
+        color: whitesmoke
+
+
+.next-title
+    margin-top: 5rem
+
+.next
+    display: flex
+    flex-direction: row
+
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 1rem
+
+    &__title
+        font-size: 80%
+        text-transform: uppercase
+        @include color('color', 'hint')
+
+    &__value
+        font-size: 150%

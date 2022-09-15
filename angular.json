@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "projects": {
+    "features-info": {
+      "projectType": "library",
+      "root": "libs/features/info",
+      "sourceRoot": "libs/features/info/src",
+      "prefix": "info",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/features/info"],
+          "options": {
+            "jestConfig": "libs/features/info/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/features/info/src/**/*.ts",
+              "libs/features/info/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "features-news": {
+      "projectType": "library",
+      "root": "libs/features/news",
+      "sourceRoot": "libs/features/news/src",
+      "prefix": "trafik",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/features/news"],
+          "options": {
+            "jestConfig": "libs/features/news/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/features/news/src/**/*.ts",
+              "libs/features/news/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "features-team": {
+      "projectType": "library",
+      "root": "libs/features/team",
+      "sourceRoot": "libs/features/team/src",
+      "prefix": "trafik",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/features/team"],
+          "options": {
+            "jestConfig": "libs/features/team/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/features/team/src/**/*.ts",
+              "libs/features/team/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-helper": {
+      "projectType": "library",
+      "root": "libs/shared/helper",
+      "sourceRoot": "libs/shared/helper/src",
+      "prefix": "trafik",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/helper"],
+          "options": {
+            "jestConfig": "libs/shared/helper/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/helper/src/**/*.ts",
+              "libs/shared/helper/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-layout": {
+      "projectType": "library",
+      "root": "libs/shared/layout",
+      "sourceRoot": "libs/shared/layout/src",
+      "prefix": "trafik",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/layout"],
+          "options": {
+            "jestConfig": "libs/shared/layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/layout/src/**/*.ts",
+              "libs/shared/layout/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "trafik-mitterlehner": {
+      "projectType": "application",
+      "root": "apps/trafik-mitterlehner",
+      "sourceRoot": "apps/trafik-mitterlehner/src",
+      "prefix": "trafik",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/trafik-mitterlehner",
+            "index": "apps/trafik-mitterlehner/src/index.html",
+            "main": "apps/trafik-mitterlehner/src/main.ts",
+            "polyfills": "apps/trafik-mitterlehner/src/polyfills.ts",
+            "tsConfig": "apps/trafik-mitterlehner/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/trafik-mitterlehner/src/favicon.ico",
+              "apps/trafik-mitterlehner/src/assets",
+              {
+                "input": "libs/features/info/src/api",
+                "glob": "**/*",
+                "output": "api"
+              }
+            ],
+            "styles": ["apps/trafik-mitterlehner/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/trafik-mitterlehner/src/environments/environment.ts",
+                  "with": "apps/trafik-mitterlehner/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "trafik-mitterlehner:build:production"
+            },
+            "development": {
+              "browserTarget": "trafik-mitterlehner:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "trafik-mitterlehner:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/trafik-mitterlehner/src/**/*.ts",
+              "apps/trafik-mitterlehner/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/trafik-mitterlehner"],
+          "options": {
+            "jestConfig": "apps/trafik-mitterlehner/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "trafik-mitterlehner-e2e": {
+      "root": "apps/trafik-mitterlehner-e2e",
+      "sourceRoot": "apps/trafik-mitterlehner-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/trafik-mitterlehner-e2e/cypress.json",
+            "tsConfig": "apps/trafik-mitterlehner-e2e/tsconfig.e2e.json",
+            "devServerTarget": "trafik-mitterlehner:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "trafik-mitterlehner:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/trafik-mitterlehner-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "trafik-mitterlehner"
+}

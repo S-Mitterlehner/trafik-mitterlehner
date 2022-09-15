@@ -1,0 +1,47 @@
+@import sass/imports
+
+.nav
+    position: relative
+
+.nav-button
+    $self: &
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-content: center
+    min-width: 3rem
+    height: 3rem
+    cursor: pointer
+
+    &__item
+        display: inline-block
+        width: 100%
+        height: 3px
+        @include color('background-color', 'nav')
+        transition: all .3s
+
+    &--open
+        #{$self}
+            &__item
+                &--2
+                    opacity: 0
+
+                &--1, &--3
+                    position: absolute
+                    top: calc(50% - 1.5px)
+
+                &--1
+                    transform: rotateZ(-45deg)
+
+                &--3
+                    transform: rotateZ(45deg)
+
+.nav-menu
+    position: absolute
+    display: inline-block
+    right: 0
+    top: 100%
+    @include use-colors('panel')
+    z-index: 10000
+                    

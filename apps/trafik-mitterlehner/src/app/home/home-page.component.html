@@ -1,0 +1,51 @@
+<div class="page page--center page--full page--close-end homepage">
+    <div class="homepage__image">
+        <div class="homepage__title-wrapper">
+            <h1 class="page__title">Herzlich Willkommen</h1>
+            <h2 class="page__sub-title">
+                in der <br/><br/>
+                <b>Trafik Mitterlehner</b><br/>
+                <a class="link" href="https://goo.gl/maps/NA9vTMesP8xatvCG7"><b>Hamerlingstraße 44</b></a> in Linz
+            </h2>
+        </div>
+        <a href="#start" title="start" class="homepage__image-arrow"></a>
+    </div>
+    <div class="page__padding homepage__wrapper" id="start">
+        <p class="page__text-content homepage__intro">
+            Die Geschichte der Trafik Mitterlehner begann in einem Kiosk nahe des Linzer Frachtenbahnhofs.<br/>
+            Mehrere Jahrzehnte von ihrer Mutter betrieben und schließlich 2018 von Andrea Mitterlehner übernommen.<br/>
+            <br/>
+            Die vielen bestehenden Stammkunden schätzen bis heute die freundliche, kompetente und vor allem persönliche Art von Andrea Mitterlehner und ihrem hervorragenden <a class="link" [routerLink]="'/team'">Team</a>, die immer ein offenes Ohr für Ihre Anliegen haben.
+            <img src="assets/logo.svg" alt="logo" class="homepage__logo">
+        </p>
+        <h3 class="page__paragraph-title">Leistungen und Angebot</h3>
+        <ul class="page__list-content list list--selectable homepage__list">
+            <li>Tabak</li>
+            <li>Zeitungen & Zeitschriften</li>
+            <li>Biletts & Geschenkspapier</li>
+            <li>Ö-Ticket</li>
+            <li>IQOS</li>
+            <li>Skruf</li>
+            <li>E-Zigaretten & Zubehör</li>
+            <li>Digitale und Analoge Vignette</li>
+            <li>Lotto, Toto, Brieflos & Rubbellose</li>
+            <li>und vieles mehr...</li>
+        </ul>
+        <h3>News</h3>
+        <div class="homepage__news">
+            <news-small-overview [news]="news"></news-small-overview>
+        </div>
+        <h3>Öffnungszeiten</h3>
+        <div class="homepage__contact">
+            <div class="homepage__opening-times">
+                <info-current-opening-info [times]="openingTimes" [closedDates]="closedDates"></info-current-opening-info>
+                <info-opening-times class="homepage__times" [times]="openingTimes"></info-opening-times>
+            </div>
+            <h3>Kontakt</h3>
+            <div class="homepage__contact">
+                <info-contact></info-contact>
+            </div>
+        </div>
+    </div>
+    <app-maps></app-maps>
+</div>

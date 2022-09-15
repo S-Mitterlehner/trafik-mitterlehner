@@ -1,0 +1,21 @@
+@import sass/imports
+
+.footer
+    position: fixed
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: .3rem 1rem
+    font-size: 80%
+    @include use-colors('footer')
+
+    &__link
+        text-decoration: underline
+        color: inherit
+
+    &__copyright
+        color: inherit

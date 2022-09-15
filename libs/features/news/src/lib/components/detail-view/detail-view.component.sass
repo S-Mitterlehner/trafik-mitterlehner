@@ -1,0 +1,33 @@
+@import sass/imports
+@import ../small-overview/small-overview.component
+
+.news-details
+    @extend .news
+    min-width: 15rem
+    width: calc(100vw - 4rem)
+    height: auto
+    border: none
+    box-shadow: none
+    background: white
+    
+    @include media-query()
+        max-width: 25vw
+    
+    &__image
+        @extend .news__image
+
+    &__title
+        @extend .news__title
+        margin-top: 3rem
+        margin-bottom: 1rem
+        font-size: 120%
+        font-weight: 400
+        text-transform: uppercase
+
+    &__text
+        @extend .news__text
+
+    &__date
+        @extend .news__date
+
+    

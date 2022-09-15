@@ -1,0 +1,22 @@
+@import sass/imports
+
+.nav-menu
+    &__item
+
+    &__link
+        display: inline-block
+        width: 100%
+        padding: 2rem 3.5rem 
+        color: black
+        font-size: 120%
+        text-transform: uppercase
+        font-weight: 100
+        transition: all .3s
+
+        @include media-query()
+            padding: 1rem 3rem 
+
+        
+
+        &:hover, &:active, &:focus
+            @include use-colors('nav-button--hover')

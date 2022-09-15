@@ -1,0 +1,13 @@
+<div class="news-overview">
+    <div class="news-overview__item news" *ngFor="let n of news">
+        <span class="news__date">{{getDateString(n.dateTime)}}</span>
+        <div class="news__image" style="background-image: url({{n.imagePath}});">
+        </div>
+        <span class="news__title">{{n.title}}</span>
+        <span class="news__text">{{getText(n.text)}}</span> &nbsp;&nbsp;
+        <button class="news__button link" *ngIf="n.text.length >= textLimit" (click)="openPopup(n)">mehr</button>
+    </div>
+</div>
+<layout-popup #popup [showBottomCloseButton]="true" [showTopCloseButton]="false">
+    <news-detail-view [news]="popupNews"></news-detail-view>
+</layout-popup>

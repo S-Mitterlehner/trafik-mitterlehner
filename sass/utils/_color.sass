@@ -1,0 +1,14 @@
+@mixin variable($name, $color, $bg-color)
+    #{'--' + $name + '-color'}: $color
+    #{'--' + $name + '-bg-color'}: $bg-color
+    
+@mixin use-colors($name, $include-color: true, $include-bg-color: true)
+    @if $include-color 
+        color: var(#{'--' + $name + '-color'})
+
+    @if $include-bg-color 
+        background-color: var(#{'--' + $name + '-bg-color'})
+    
+@mixin color($property, $color)
+    #{$property}: var(#{'--' + $color + '-color'})
+

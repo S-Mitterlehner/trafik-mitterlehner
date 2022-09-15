@@ -1,0 +1,74 @@
+.page
+    max-width: 160rem
+    padding: 1rem
+    margin: auto 
+    margin-top: 5rem
+    margin-bottom: 15rem
+
+    &--close-end
+        margin-bottom: 0
+
+    &--full
+        max-width: unset
+        padding: 0
+        margin-top: 0
+
+    &--center
+        h1, h2, h3, h4
+            text-align: center
+
+    h1, h2, h3, h4
+        @include color('color', 'accent--2')
+
+    h1
+        font-size: 180%
+        text-transform: uppercase
+        letter-spacing: 2px
+        margin-bottom: 2rem
+        font-weight: 400
+
+    h2
+        font-size: 140%
+        font-weight: 100
+
+        b
+            font-weight: 400
+
+    h3
+        margin-top: 5rem
+        font-size: 140%
+        font-weight: 100
+        text-transform: uppercase
+
+    &__text-content
+        max-width: 100rem
+        margin-top: 2rem
+
+        & > li
+            padding: 1.5rem
+            text-align: center
+            width: 100%
+
+            @include media-query()
+                max-width: 60rem
+            
+
+        &--selectable
+            & > li
+                background: linear-gradient(35deg, #{$accent} 0%, #{$accent} 50%, transparent 51%)
+                background-size: 310%
+                background-position-x: 100%
+                transition: all .8s
+
+                @include media-query()
+                    background-size: 220%
+                
+                &:hover
+                    background-position-x: 0%
+                    color: white
+
+    &__padding
+        padding: 1rem
+                
+
+

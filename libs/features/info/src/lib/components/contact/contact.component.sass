@@ -1,0 +1,49 @@
+@import sass/imports
+    
+.contact
+    position: relative
+    display: flex
+    flex-direction: row-reverse
+    flex-wrap: wrap
+    justify-content: center
+    width: 100%
+
+    @include media-query()
+        flex-direction: row
+        
+    &__separator
+        display: inline-block
+        width: 6px
+        height: 100%
+        @include color('background-color', 'accent--2')
+
+    &__form, &__info
+        width: 100%
+        padding: 2rem
+
+        @include media-query()
+            width: 50%
+
+    &__form
+        display: flex
+        flex-direction: column
+
+        button
+            width: 25rem
+            align-self: center
+
+    &__info
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        min-height: 30rem
+
+        & * > h4
+            padding: 1rem 0 
+            
+    textarea
+        min-height: 15rem
+        max-height: 15rem
+
+

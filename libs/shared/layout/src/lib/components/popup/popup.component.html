@@ -1,0 +1,12 @@
+<div class="backdrop" (click)="hide()" *ngIf="isShown"></div>
+<div class="popup" *ngIf="isShown">
+    <button class="popup__close-icon" (click)="hide()" *ngIf="showTopCloseButton"></button>
+    <div class="popup__content">
+        <ng-content></ng-content>
+    </div>
+    <div class="popup__bottom" *ngIf="showBottomCloseButton">
+        <button mat-raised-button color='primary' class="popup__close-button" (click)="hide()">
+            <mat-icon>close</mat-icon> Schließen
+        </button>
+    </div>
+</div>

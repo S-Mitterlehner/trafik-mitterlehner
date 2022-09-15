@@ -1,0 +1,55 @@
+@import sass/imports
+
+
+.news-overview
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    @include media-query()
+        flex-direction: row
+
+    &__item
+        max-width: 55rem
+        &:not(:first-child)
+            margin-top: 1rem
+
+            @include media-query()
+                margin-left: 1rem
+                margin-top: 0
+
+
+.news
+    position: relative
+    width: 100%
+    min-height: 30rem
+    padding: 1rem
+    padding-top: 3rem
+    border: 1px solid black
+    border-radius: 5px
+    overflow: hidden
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .3)
+    background-color: whitesmoke
+
+    &__image
+        height: 15rem
+        width: 100%
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+
+    &__title
+        display: block
+        font-weight: bold
+        overflow: hidden
+
+    &__text
+        font-size: 75%
+
+    &__date
+        position: absolute
+        top: .5rem
+        left: 1rem
+        font-weight: 100
+        font-size: 80%
+

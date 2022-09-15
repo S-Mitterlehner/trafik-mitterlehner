@@ -1,0 +1,26 @@
+<div *ngIf="currentStatus !== undefined" style="text-align: center;">
+    <div class="status status--{{currentStatus.cssClass}}">
+        {{currentStatus.text}}
+    </div>
+</div>
+<div *ngIf="currentStatus !== undefined && nextDifference !== undefined">
+    <h4 class="next-title">{{currentStatus.nextText}}</h4>
+    <div class="next">
+        <div class="next__item">
+            <span class="next__value">{{nextDifference.days}}</span>
+            <span class="next__title">Tage</span>
+        </div>
+        <div class="next__item">
+            <span class="next__value">{{nextDifference.hours}}</span>
+            <span class="next__title">Stunden</span>
+        </div>
+        <div class="next__item">
+            <span class="next__value">{{nextDifference.minutes}}</span>
+            <span class="next__title">Minuten</span>
+        </div>
+        <div class="next__item">
+            <span class="next__value">{{nextDifference.seconds}}</span>
+            <span class="next__title">Sekunden</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@trafik/features/info": ["libs/features/info/src/index.ts"],
+      "@trafik/features/news": ["libs/features/news/src/index.ts"],
+      "@trafik/features/team": ["libs/features/team/src/index.ts"],
+      "@trafik/shared/helper": ["libs/shared/helper/src/index.ts"],
+      "@trafik/shared/layout": ["libs/shared/layout/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

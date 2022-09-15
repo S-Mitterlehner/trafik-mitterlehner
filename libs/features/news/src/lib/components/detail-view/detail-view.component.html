@@ -1,0 +1,6 @@
+<div class="news-details" *ngIf="news !== undefined">
+    <span class="news-details__date ">{{getDateString(news.dateTime)}}</span>
+    <div class="news-details__image" style="background-image: url({{news.imagePath}});"></div>
+    <span class="news-details__title">{{news.title}}</span>
+    <span class="news-details__text">{{news.text}}</span> &nbsp;&nbsp;
+</div>
