@@ -12,13 +12,12 @@ export class CookieService {
   getSettings(): Observable<CookieSettings|null> {
     return new Observable<CookieSettings|null>(observer => {
       const txt = localStorage.getItem(COOKIE_SETTINGS);
-      if(txt !== null){
-        const settings = JSON.parse(txt);
-        observer.next(settings);
+      if(txt === null){
+        observer.next(null);
         return;
       }
-
-      observer.next(null);
+      const settings = JSON.parse(txt);
+      observer.next(settings);
     })
   }
 

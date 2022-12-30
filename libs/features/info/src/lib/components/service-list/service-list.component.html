@@ -1,0 +1,8 @@
+<ul class="service-list">
+    <li class="service-list__item" *ngFor="let i of items">
+        <button class="service-list__detail-button" *ngIf="i.hasAdditionalInfo" (click)="openDetails(i)">
+            {{i.name}}
+        </button>
+        {{i.hasAdditionalInfo ? "" : i.name}}
+    </li>
+</ul>

@@ -1,0 +1,87 @@
+@import '../utils/color';
+
+$main-color: black;
+$main-bg-color: white;
+$accent-primary: #006c99;
+$accent-secondary: #ea4f15;
+$error: red;
+
+//#293133
+$main-background-color: whitesmoke;
+
+
+$colors: (
+    main: $main-color,
+    main-bg: whitesmoke,
+    accent-primary: $accent-primary,
+    accent-secondary: $accent-secondary,
+    error: red,
+
+    header: white,
+    header-bg: $accent-primary,
+    
+    panel: black,
+    pangel-bg: white,
+
+    nav-button: black,
+    nav-button-bg: transparent,
+    nav-button--hover: black, 
+    nav-button--hover-bg: $accent-primary,
+
+    footer: whitesmoke,
+    footer-bg: #444,
+
+    popup: $main-color,
+    popup-bg: $main-bg-color,
+
+    link: $accent-secondary,
+    link-bg: transparent,
+    link--hover: $accent-primary,
+    link--hover-bg: transparent,
+
+    website-title: white, 
+    website-title-bg: transparent,
+
+    cookie: white, 
+    cookie-bg: #293133
+);
+
+// colors
+:root {
+    @include variable('main', black, $main-background-color);
+
+    --secondary-color: whitesmoke;
+    --accent-color: #{$accent-primary};
+    --accent-light-color: #{transparentize($accent-primary,.3)};
+    --accent--2-color: #{$accent-secondary};
+    --accent--2-light-color: #{transparentize($accent-secondary, .3)};
+    --error-color: #{$error};
+    --hint-color: grey;
+
+    @each $name, $val in $colors {
+        --#{$name}-light-20: #{lighten($val, 20)};
+        --#{$name}-light-10: #{lighten($val, 10)}; 
+        --#{$name}: #{$val};
+        --#{$name}-dark-10: #{darken($val, 10)};
+        --#{$name}-dark-20: #{darken($val, 20)}; 
+    }
+
+
+    // @include variable('header', white, #{$accent});
+    // @include variable('nav', white, white);
+    // @include variable('panel', black, white);
+    // @include variable('nav-button', black, transparent);
+    // @include variable('nav-button--hover', whitesmoke, #{$accent});
+    // @include variable('footer', whitesmoke, #444);
+    // @include variable('popup', $main-color, $main-bg-color);
+
+    // @include variable('link', #{$accent--2}, transparent);
+    // @include variable('link--hover', #{$accent}, transparent);
+    // @include variable('accent-back', black, $accent--2);
+
+
+    // @include variable('website-title', white, transparent);
+
+    // @include variable('cookie', white, #293133);
+}
+    

@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PopupComponent } from './components/popup/popup.component';
 import { CookieWarnComponent } from './components/cookie-warn/cookie-warn.component';
 import { FormsModule } from '@angular/forms';
+import { ToggleComponent } from './components/toggle/toggle.component';
 
 export const layoutRoutes: Route[] = [];
 
@@ -29,7 +30,8 @@ export const layoutRoutes: Route[] = [];
     NavComponent,
     FooterComponent,
     PopupComponent,
-    CookieWarnComponent
+    CookieWarnComponent,
+    ToggleComponent
   ],
   exports: [
     HeaderComponent,

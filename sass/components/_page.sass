@@ -17,28 +17,12 @@
         h1, h2, h3, h4
             text-align: center
 
-    h1, h2, h3, h4
-        @include color('color', 'accent--2')
-
-    h1
-        font-size: 180%
-        text-transform: uppercase
-        letter-spacing: 2px
+    section:not(:first-child)
+        display: block
+        width: 100%
+        padding-top: 5rem
+        border-top: 1px solid lightgrey
         margin-bottom: 2rem
-        font-weight: 400
-
-    h2
-        font-size: 140%
-        font-weight: 100
-
-        b
-            font-weight: 400
-
-    h3
-        margin-top: 5rem
-        font-size: 140%
-        font-weight: 100
-        text-transform: uppercase
 
     &__text-content
         max-width: 100rem
@@ -55,7 +39,7 @@
 
         &--selectable
             & > li
-                background: linear-gradient(35deg, #{$accent} 0%, #{$accent} 50%, transparent 51%)
+                background: linear-gradient(35deg, var(--accent-primary) 0%, var(--accent-primary) 50%, transparent 51%)
                 background-size: 310%
                 background-position-x: 100%
                 transition: all .8s
@@ -66,9 +50,3 @@
                 &:hover
                     background-position-x: 0%
                     color: white
-
-    &__padding
-        padding: 1rem
-                
-
-

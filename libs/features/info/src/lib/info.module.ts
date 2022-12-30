@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ServiceListComponent } from './components/service-list/service-list.component';
 
 @NgModule({
   imports: [
@@ -22,12 +23,14 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     OpeningTimesComponent,
     CurrentOpeningInfoComponent,
-    ContactComponent
+    ContactComponent,
+    ServiceListComponent
   ],
   exports: [
     OpeningTimesComponent,
     CurrentOpeningInfoComponent,
-    ContactComponent
+    ContactComponent,
+    ServiceListComponent
   ],
 })
 export class InfoModule {}

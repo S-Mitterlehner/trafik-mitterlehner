@@ -21,7 +21,10 @@ import { MapsComponent } from './components/maps/maps.component';
     AppComponent
     , NavMenuComponent
     , HomePageComponent
-    , ImpressumComponent, ContactPageComponent, TeamComponent, MapsComponent
+    , ImpressumComponent
+    , ContactPageComponent
+    , TeamComponent
+    , MapsComponent
   ],
   imports: [
     BrowserModule, 

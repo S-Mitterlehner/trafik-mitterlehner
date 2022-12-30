@@ -1,0 +1,7 @@
+<label class="toggle" [class.toggle--disabled]="disabled" [class.toggle--checked]="checked">
+    <input type="checkbox" class="hidden" (change)="changeValue($event)" [(ngModel)]="checked" [name]="name" [disabled]="disabled">
+    <div class="toggle__slider">
+        <span class="toggle__slider-dot"></span>
+    </div>
+    <span class="toggle__label">{{label}}</span>
+</label>

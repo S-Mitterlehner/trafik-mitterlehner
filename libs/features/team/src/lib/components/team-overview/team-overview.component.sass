@@ -9,6 +9,7 @@
     &__member
         min-width: 20rem
         width: 100vw
+        height: 45rem
         margin-bottom: 1rem
 
         @include media-query()
@@ -19,20 +20,19 @@
 .employee
     display: flex
     flex-direction: column
-    // padding: 2rem
     border: 1px solid black
+    
 
     &__image
         position: relative
-        height: 45rem
+        height: 100%
         width: 100%
-        background-size: cover
-        background-position: center
-        
-        & > img
+        object-fit: cover
+        overflow: hidden
+
+        & img 
             width: 100%
-            max-width: 100%
-            max-height: 100%
+            height: auto            
 
     &__name
         padding: 1.5rem

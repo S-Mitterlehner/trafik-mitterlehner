@@ -42,5 +42,4 @@ export class CookieWarnComponent implements OnInit{
     this.settings.media = true;
     this.saveSelection();
   }
-
 }

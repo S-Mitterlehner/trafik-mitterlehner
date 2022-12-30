@@ -1,0 +1,50 @@
+@import sass/imports
+
+.toggle
+    $self: &
+    position: relative
+    display: flex
+    flex-direction: row
+    align-items: center
+    cursor: pointer
+
+    &__slider
+        position: relative
+        display: inline-block
+        width: 4rem
+        height: 1rem
+        background-color: var(--accent-primary-light-20)
+        border-radius: 500rem
+
+        &-dot
+            display: inline-block
+            position: absolute
+            top: 50%
+            width: 2rem
+            aspect-ratio: 1
+            border-radius: 50%
+            transform: translateY(-50%)
+            background-color: var(--accent-primary)
+
+    &__label
+        margin-left: 1rem
+    
+    &--checked
+        #{$self}
+            &__slider
+                background-color: var(--accent-secondary-light-20)
+            
+                &-dot
+                    right: 0
+                    left: unset
+                    background-color: var(--accent-secondary)
+    
+    &--disabled
+        cursor: not-allowed
+        
+        #{$self}
+            &__slider
+                background-color: var(--secondary-color)
+                
+                &-dot
+                    background-color: #ccc //TODO

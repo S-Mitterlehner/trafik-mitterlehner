@@ -1,0 +1,50 @@
+@import sass/imports
+
+.service-list
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    &__item
+        padding: 1.5rem
+        text-align: center
+        width: 100%
+        background: linear-gradient(35deg, transparent 0%, transparent 50%, var(--accent-primary) 51%)
+        background-size: 310%
+        background-position-x: 0%
+        transition: all .8s
+        animation: fill .8s ease-in-out 0s 1 forwards
+
+        @media (prefers-reduced-motion)
+            animation: none
+            background: transparent
+            transition: all .3s
+
+        @include media-query()
+            max-width: 60rem
+            background-size: 230%
+        
+        &:hover
+            background: linear-gradient(35deg, var(--accent-primary) 0%, var(--accent-primary) 50%, transparent 51%)
+            background-size: 310%
+            background-position-x: 100%
+            color: white
+            animation: fill2 .8s ease-in-out 0s 1 forwards
+            
+            @media (prefers-reduced-motion)
+                animation: none
+                background: var(--accent-primary)
+
+@keyframes fill
+    0%
+        background-position-x: 100%
+    100%
+        background-position-x: 0%
+
+    
+@keyframes fill2
+    0%
+        background-position-x: 100%
+    100%
+        background-position-x: 0%

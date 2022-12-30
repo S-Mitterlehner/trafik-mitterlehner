@@ -4,11 +4,11 @@
     
 @mixin use-colors($name, $include-color: true, $include-bg-color: true)
     @if $include-color 
-        color: var(#{'--' + $name + '-color'})
+        color: var(#{'--' + $name})
 
     @if $include-bg-color 
-        background-color: var(#{'--' + $name + '-bg-color'})
+        background-color: var(#{'--' + $name + '-bg'})
     
 @mixin color($property, $color)
-    #{$property}: var(#{'--' + $color + '-color'})
+    #{$property}: var(#{'--' + $color})
 

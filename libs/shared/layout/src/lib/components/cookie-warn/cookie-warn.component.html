@@ -1,16 +1,16 @@
-<div class="cookie-warn" *ngIf="isShown">
+<aside class="cookie-warn" *ngIf="isShown">
     <h4 class="cookie-warn__title">Diese Website verwendet Cookies</h4>
-    <div class="cookie-warn__text">
+    <section class="cookie-warn__text">
         Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren, Funktionen für soziale Medien anbieten zu können und die Zugriffe auf unserer Website zu analysieren. Außerdem geben wir Informationen zu Ihrer Verwendung unserer Website an unsere Partner für Medien und Analysen weiter. Unsere Partner führen diese Informationen möglicherweise mit weiteren Daten zusammen, die Sie ihnen bereitgestellt haben, oder die sie im Rahmen ihrer Nutzung der Dienste gesammelt haben. <a class="link" [routerLink]="'/impressum'">weitere Infos & Datenschutz</a>
-    </div>
-    <div class="cookie-warn__selection">
-        <mat-slide-toggle [checked]="true" [disabled]="true">Notwendig</mat-slide-toggle>
-        <mat-slide-toggle [(ngModel)]="settings.media">Medien</mat-slide-toggle>
-        <mat-slide-toggle [(ngModel)]="settings.analysis">Statistiken</mat-slide-toggle>
-    </div>
-    <div class="cookie-warn__buttons">
+    </section>
+    <section class="cookie-warn__selection">
+        <layout-toggle label="Notwendig" [checked]="true" [disabled]="true"></layout-toggle>
+        <layout-toggle label="Medien" name="media" [(checked)]="settings.media"></layout-toggle>
+        <layout-toggle label="Statistiken" name="analysis" [(checked)]="settings.analysis"></layout-toggle>
+    </section>
+    <section class="cookie-warn__buttons">
         <button mat-stroked-button color="primary" (click)="hide()">Ablehnen</button>
         <button mat-stroked-button color="primary" (click)="saveSelection()">Auswahl speichern</button>
         <button mat-raised-button color="primary" (click)="saveAll()">Alle Akzeptieren</button>
-    </div>
-</div>
+    </section>
+</aside>
