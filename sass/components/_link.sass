@@ -2,11 +2,11 @@
     display: inline-block
     color: inherit
     border-bottom: 2px solid
-    @include color('border-bottom-color', 'link')
+    border-bottom-color: var(--secondary)
     white-space: nowrap
     transition: all .3s
 
     &:hover
-        @include color('color', link--hover)
-        @include color('border-bottom-color', 'link--hover')
+        color: var(--primary)
+        border-bottom-color: var(--primary)
         

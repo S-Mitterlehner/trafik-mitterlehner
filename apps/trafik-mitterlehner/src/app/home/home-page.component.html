@@ -24,7 +24,7 @@
             <h3 class="page__section-title">Leistungen und Angebot</h3>
             <info-service-list *ngIf="serviceOffers.length > 0" [items]="serviceOffers"></info-service-list>
         </section>
-        <section  class="homepage__news">
+        <section class="homepage__news">
             <h3>News</h3>
             <news-small-overview [news]="news"></news-small-overview>
         </section>
@@ -35,11 +35,9 @@
                 <info-opening-times class="homepage__times" [times]="openingTimes"></info-opening-times>
             </div>
         </section>
-        <section>
+        <section class="homepage__contact">
             <h3>Kontakt</h3>
-            <div class="homepage__contact">
-                <info-contact></info-contact>
-            </div>
+            <info-contact></info-contact>
         </section>
     </main>
     <app-maps></app-maps>

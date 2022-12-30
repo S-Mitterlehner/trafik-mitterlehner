@@ -4,10 +4,12 @@
 .news-overview
     display: flex
     flex-direction: column
-    justify-content: space-between
+    justify-content: center
+    align-items: center
 
     @include media-query()
         flex-direction: row
+        // width: clamp(50rem, 50rem, 160rem)
 
     &__item
         max-width: 55rem
@@ -32,16 +34,23 @@
     background-color: whitesmoke
 
     &__image
+        margin: auto
         height: 15rem
         width: 100%
-        background-size: contain
-        background-repeat: no-repeat
-        background-position: center
+        object-fit: contain
+
+        & img
+            height: 15rem
+            width: 100%
+            object-fit: contain
 
     &__title
         display: block
         font-weight: bold
         overflow: hidden
+        text-align: left
+        color: $dark
+        margin-bottom: 1rem
 
     &__text
         font-size: 75%

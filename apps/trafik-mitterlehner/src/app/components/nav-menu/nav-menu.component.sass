@@ -1,8 +1,6 @@
 @import sass/imports
 
 .nav-menu
-    &__item
-
     &__link
         display: inline-block
         width: 100%
@@ -16,7 +14,6 @@
         @include media-query()
             padding: 1rem 3rem 
 
-        
-
         &:hover, &:active, &:focus
-            @include use-colors('nav-button--hover')
+            background: var(--primary)
+            color: var(--light)

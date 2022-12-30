@@ -13,7 +13,7 @@
         display: inline-block
         width: 4rem
         height: 1rem
-        background-color: var(--accent-primary-light-20)
+        background-color: var(--primary-light-20)
         border-radius: 500rem
 
         &-dot
@@ -24,7 +24,7 @@
             aspect-ratio: 1
             border-radius: 50%
             transform: translateY(-50%)
-            background-color: var(--accent-primary)
+            background-color: var(--primary)
 
     &__label
         margin-left: 1rem
@@ -32,19 +32,19 @@
     &--checked
         #{$self}
             &__slider
-                background-color: var(--accent-secondary-light-20)
+                background-color: var(--secondary-light-20)
             
                 &-dot
                     right: 0
                     left: unset
-                    background-color: var(--accent-secondary)
+                    background-color: var(--secondary)
     
     &--disabled
         cursor: not-allowed
         
         #{$self}
             &__slider
-                background-color: var(--secondary-color)
+                background-color: var(--light)
                 
                 &-dot
-                    background-color: #ccc //TODO
+                    background-color: var(--hint)

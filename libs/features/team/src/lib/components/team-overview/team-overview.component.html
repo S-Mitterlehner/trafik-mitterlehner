@@ -1,7 +1,7 @@
 <ul class="team">
     <li class="team__member" *ngFor="let employee of employees"> 
         <figure class="employee">
-            <picture class="employee__image">
+            <picture class="employee__picture">
                 <source srcset="{{employee.imagePath}}" type="image/jpg">
                 <img src="{{employee.imagePath}}" loading="lazy" decoding="async">
             </picture>

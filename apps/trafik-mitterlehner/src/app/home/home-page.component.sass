@@ -4,7 +4,7 @@
     position: relative
 
     h1, h2
-        @include use-colors('website-title')
+        color: var(--light)
 
 
     &__wrapper
@@ -46,8 +46,8 @@
         height: 3rem
         border-bottom: 10px solid
         border-right: 10px solid
-        @include color('border-bottom-color', 'accent--2')
-        @include color('border-right-color', 'accent--2')
+        border-bottom-color: var(--secondary)
+        border-right-color: var(--secondary)
         transform: translateX(-50%) rotateZ(45deg) 
         transition: all .3s
 

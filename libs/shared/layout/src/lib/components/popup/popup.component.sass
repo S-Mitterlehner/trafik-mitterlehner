@@ -8,7 +8,8 @@
     padding-top: 3rem
     transform: translate(-50%, -50%)
     box-shadow: 5px 5px 15px rgba(0,0,0,.5)
-    @include use-colors('popup')
+    color: var(--main)
+    background-color: var(--main-bg)
     z-index: 10001
 
     &__close-icon
@@ -24,7 +25,7 @@
             left: 50%
             width: 2rem
             height: 2px
-            @include color('background-color', 'main')
+            background-color: var(--main-bg )
             
         &::after
             transform: translate(-50%, -50%) rotateZ(45deg)

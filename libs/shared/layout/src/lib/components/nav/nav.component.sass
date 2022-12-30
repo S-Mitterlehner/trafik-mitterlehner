@@ -18,7 +18,7 @@
         display: inline-block
         width: 100%
         height: 3px
-        @include color('background-color', 'nav')
+        background-color: var(--main-bg)
         transition: all .3s
 
     &--open
@@ -42,6 +42,7 @@
     display: inline-block
     right: 0
     top: 100%
-    @include use-colors('panel')
+    color: var(--main)
+    background-color: var(--main-bg)
     z-index: 10000
                     
