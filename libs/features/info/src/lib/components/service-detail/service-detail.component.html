@@ -1,0 +1,9 @@
+<article class="service">
+    <h5 class="service__title">{{item.name}}</h5>
+    <picture class="service__picture">
+        <source [srcset]="item.imagePath">
+        <img [src]="item.imagePath" [alt]="item.name">
+    </picture>
+    <p class="service__description text">{{item.description}}</p>
+    <button class="button service__close" (click)="closeRequested.emit()">schließen</button>
+</article>

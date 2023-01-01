@@ -6,3 +6,11 @@
         {{i.hasAdditionalInfo ? "" : i.name}}
     </li>
 </ul>
+
+<layout-popup #popup>
+    <info-service-detail 
+        *ngIf="selectedItem !== undefined" 
+        [item]="selectedItem"
+        (closeRequested)="closeDetails()">
+    </info-service-detail>
+</layout-popup>

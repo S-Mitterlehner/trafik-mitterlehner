@@ -1,0 +1,26 @@
+.button
+    display: inline-block
+    padding: 1rem 3rem 
+    background-color: var(--primary)
+    color: var(--light)
+    transition: all .3s
+    box-shadow: 5px 5px 10px rgba(0,0,0,.3)
+
+    &:hover, &:focus
+        background-color: var(--primary-dark-10)
+        transform: translateY(-2px)
+        box-shadow: 5px 5px 15px rgba(0,0,0,.3)
+
+        @media (prefers-reduced-motion)
+            transform: none
+            box-shadow: none
+
+    &:active
+        background-color: var(--primary-dark-10)
+        transform: translateY(-1px)
+        box-shadow: 5px 5px 13px rgba(0,0,0,.3)
+
+        @media (prefers-reduced-motion)
+            transform: none
+            box-shadow: none
+        

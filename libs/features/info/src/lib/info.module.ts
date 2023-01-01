@@ -10,12 +10,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ServiceListComponent } from './components/service-list/service-list.component';
+import { LayoutModule } from '@trafik/shared/layout';
+import { ServiceDetailComponent } from './components/service-detail/service-detail.component'
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
+    LayoutModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule
@@ -24,7 +27,8 @@ import { ServiceListComponent } from './components/service-list/service-list.com
     OpeningTimesComponent,
     CurrentOpeningInfoComponent,
     ContactComponent,
-    ServiceListComponent
+    ServiceListComponent,
+    ServiceDetailComponent
   ],
   exports: [
     OpeningTimesComponent,

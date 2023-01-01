@@ -1,0 +1,40 @@
+@import sass/imports
+
+.service
+    display: flex
+    flex-direction: column
+    width: 90vw
+
+    @include media-query()
+        display: grid
+        grid-template-areas: "title title" "descr pic" "btn btn"
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: auto 1fr
+        gap: 0 1rem
+        width: 50vw
+        max-width: 90vw
+
+    &__title
+        grid-area: title
+        font-size: 120%
+        font-weight: 100
+        color: var(--secondary)
+        letter-spacing: 2px
+        margin-bottom: 1rem
+
+    &__description
+        grid-area: descr
+        margin-bottom: 1rem
+
+    &__picture
+        grid-area: pic
+        width: 100%
+        height: auto
+        margin-bottom: 1rem
+
+        & img
+            width: 100%
+            height: auto
+    
+    &__close
+        grid-area: btn

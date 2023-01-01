@@ -1,8 +1,10 @@
 <table class="opening-times">
-    <tr class="opening-times__item" *ngFor="let time of times">
-        <td class="opeing-times__day">{{time.weekday}}</td>
-        <td class="opening-times__from">{{getTimeString(time.from)}}</td>
-        <td class="opening-times__separator">-</td>
-        <td class="opening-times__to">{{getTimeString(time.to)}}</td>
-    </tr>
+    <tbody>
+        <tr class="opening-times__item" *ngFor="let time of times">
+            <td class="opeing-times__day">{{time.weekday}}</td>
+            <td class="opening-times__from">{{getTimeString(time.from)}}</td>
+            <td class="opening-times__separator">-</td>
+            <td class="opening-times__to">{{getTimeString(time.to)}}</td>
+        </tr>
+    </tbody>
 </table>
